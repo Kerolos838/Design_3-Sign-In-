@@ -1,0 +1,134 @@
+/* Start Variables */
+:root{
+  --main-color: #5b9dd6;
+  --second-color: #0189ff;
+}
+/* End Variables */
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+ul {
+  list-style: none;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+.sign_in {
+  background-image: url(../images/pexels-neosiam-579216.jpg);
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sign_in .box {
+  position: relative;
+  text-align: center;
+  width: 440px;
+  height: 540px;
+  background-color: rgb(186 223 226 / 32%);
+  border-radius: 10px;
+  border: 2px solid var(--main-color);
+}
+.sign_in .box form {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
+}
+@media (max-width: 767px) {
+  .sign_in .box {
+    width: 340px;
+    height: 480px;
+  }
+  .sign_in .box form {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 13px;
+  }
+}
+.sign_in .box form p {
+  margin: 45px 0 20px;
+  color: var(--second-color);
+  text-transform: capitalize;
+}
+@media (max-width: 767px){
+  .sign_in .box form p {
+    font-size: 16px;
+  }
+}
+.sign_in .box form input:not(.send) {
+  background: none;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid var(--main-color);
+  padding: 10px;
+  caret-color: var(--second-color);
+  text-transform: capitalize;
+}
+
+.sign_in .box a{
+  position: absolute;
+  bottom: 10px;
+  font-size: 14px;
+  display: block;
+  text-decoration: none;
+  color: #013cff;
+  text-transform: capitalize;
+}
+@media (max-width: 767px){
+  .sign_in .box a {
+    font-size: 12px;
+  }
+}
+.sign_in .box a.sign-up {
+  position: absolute;
+  bottom: -125px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 18px;
+  text-transform: capitalize;
+}
+.sign_in .box form input.send {
+  display: block;
+  position: relative;
+  left: 50%;
+  top: 70px;
+  transform: translateX(-50%);
+  padding: 8px 20px;
+  background-color: var(--second-color);
+  border:none;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+}
